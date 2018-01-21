@@ -1,8 +1,8 @@
 import random
 import itertools
 
-board_count = 7
 
+board_count = 7
 
 def generate_first_population(pop_size):
     return [[
@@ -110,7 +110,7 @@ class Solver_8_queens:
         self.cross_prob = cross_prob
         self.mut_prob = mut_prob
 
-    def solve(self, min_fitness=1, max_epochs=10000):
+    def solve(self, min_fitness=1, max_epochs=1000):
         best_fit = 0
         best_individual = None
         epoch_num = None
