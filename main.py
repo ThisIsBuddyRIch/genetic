@@ -2,7 +2,10 @@ import random
 import itertools
 
 
-board_count = 7
+board_count = 8
+
+board_count -= 1
+
 
 def generate_first_population(pop_size):
     return [[
