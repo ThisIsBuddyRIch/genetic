@@ -1,7 +1,6 @@
 import random
 import itertools
 
-
 board_count = 8
 
 board_count -= 1
@@ -40,7 +39,6 @@ def visualization(individual):
 
 
 def cross(first_chromosome, second_chromosome):
-
     max_number = board_count
 
     shift = random.randint(0, max_number.bit_length() - 1)
@@ -148,6 +146,3 @@ if __name__ == "__main__":
     solver = Solver_8_queens()
     best_fit, epoch_num, visual = solver.solve()
     print(str.format("best_fit : {0},\nepoch_num: {1},\nvisual:\n{2}", best_fit, epoch_num, visual))
-
-
-
