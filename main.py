@@ -15,10 +15,6 @@ class CrossoverMethod(Enum):
 
 class Individual:
     def __init__(self, value):
-        """
-        :param value:
-        :type value: list
-        """
         self.value = value
         self._fitness = None
 
@@ -43,12 +39,6 @@ class Individual:
 
     @property
     def visualization(self):
-        """
-        Function for visualizing answer
-        :return:
-        :type: str
-        """
-
         view_list = list(self.value)
 
         tpl_len = len(view_list)
@@ -144,10 +134,6 @@ class Solver_8_queens:
         return best_fit, epoch_num, best_individual.visualization
 
     def generate_first_population(self):
-        """
-        :return:
-        :rtype list[Individual]
-        """
         result = []
         for _ in range(self.pop_size):
             item = [random.randint(0, Solver_8_queens.board_count) for _ in range(0, Solver_8_queens.board_count + 1)]
@@ -258,3 +244,4 @@ if __name__ == "__main__":
     solver = Solver_8_queens(selection_method=SelectionMethod.WHEEL)
     best_fit, epoch_num, visual = solver.solve()
     print(str.format("best_fit : {0}\nepoch_num: {1}\nvisual:\n{2}", best_fit, epoch_num, visual))
+        
