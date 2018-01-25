@@ -241,7 +241,6 @@ class Solver_8_queens:
 
 
 if __name__ == "__main__":
-    solver = Solver_8_queens(selection_method=SelectionMethod.WHEEL)
-    best_fit, epoch_num, visual = solver.solve()
+    solver = Solver_8_queens(selection_method=SelectionMethod.TOURNAMENT)
+    best_fit, epoch_num, visual = solver.solve(max_epochs=None)
     print(str.format("best_fit : {0}\nepoch_num: {1}\nvisual:\n{2}", best_fit, epoch_num, visual))
-        
